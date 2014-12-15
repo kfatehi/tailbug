@@ -1,0 +1,23 @@
+{
+  "name": "tailbug",
+  "version": "1.0.0",
+  "description": "log into a file you tail",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keyvanfatehi/tailbug.git"
+  },
+  "keywords": [
+    "tail",
+    "log"
+  ],
+  "author": "Keyvan Fatehi <keyvanfatehi@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keyvanfatehi/tailbug/issues"
+  },
+  "homepage": "https://github.com/keyvanfatehi/tailbug"
+}
