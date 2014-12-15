@@ -3,10 +3,10 @@ var util = require('util')
 
 module.exports = function(filePath) {
   return function() {
-    var stacktrace = new Error().err.stack.split('\n');
-    var calledFrom = stacktrace[1].replace(/\s+at debug /, '');
-    var label = __filename.replace(__dirname,'').replace(/\//,'');
-    var line = label+' '+util.format.apply(this, arguments);
-    fs.appendFileSync(filePath, line + '\n');
+    var location = new Error().stack.split('\n')[2].replace(/^\s+/,'');
+    var pre = '>>> '+location+'\n';
+    var line = util.format.apply(this, arguments)+'\n';
+    var post = '<<< '+location+'\n';
+    fs.appendFileSync(filePath, pre+line+post);
   }
 }
